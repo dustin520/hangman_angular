@@ -15,7 +15,21 @@ Hangman.config ["$routeProvider", "$locationProvider", ($routeProvider, $locatio
 ]
 
 # Hangman Controller
-GamesCtrl.controller "GamesCtrl", ["$scope", "$http", ($scope, $http) ->
+Hangman.controller "GamesCtrl", ["$scope", "$http", ($scope, $http) ->
+
+  # create button letters for guessing
+  $scope.alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+  $scope.secretWord = []
+  $scope.letters = []
+  $scope.displayLetters = ""
+  $scope.correctGuesses = ""
+  $scope.hintOnes = []
+  bodyCount = 0
+  correctCount = 0
+
+  $scope.getLetter = (letter) ->
+    $scope.letters.push(letter)
 
 
 

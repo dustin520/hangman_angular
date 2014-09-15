@@ -1,1 +1,28 @@
+
+
+
+<div class="container">
+{{alphabet}}
 <h1>Hangman</h1>
+
+  <svg class="col-md-6">
+    
+  </svg>
+
+  <form action="javascript:void(0);" ng-submit="secretWord()">
+    <input type="text" placeholder = "enter secret word" autofocus>
+    <button>enter</button>
+  </form>  
+
+
+
+
+  <ul ng-repeat = "alphabet in alphabets" class = "col-md-offset-6 col-md-6">
+    <button class="" ng-click="getLetter(letter)">{{alphabet}}</button>
+
+  </ul>
+
+  <p ng-model="letters">{{letters}}</p>
+
+</div>
+

@@ -15,7 +15,22 @@ Hangman.config([
   }
 ]);
 
-GamesCtrl.controller("GamesCtrl", ["$scope", "$http", function($scope, $http) {}]);
+Hangman.controller("GamesCtrl", [
+  "$scope", "$http", function($scope, $http) {
+    var bodyCount, correctCount;
+    $scope.alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    $scope.secretWord = [];
+    $scope.letters = [];
+    $scope.displayLetters = "";
+    $scope.correctGuesses = "";
+    $scope.hintOnes = [];
+    bodyCount = 0;
+    correctCount = 0;
+    return $scope.getLetter = function(letter) {
+      return $scope.letters.push(letter);
+    };
+  }
+]);
 
 Hangman.config([
   "$httpProvider", function($httpProvider) {
