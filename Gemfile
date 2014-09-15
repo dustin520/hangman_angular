@@ -32,6 +32,12 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+gem 'angular-rails-templates'
+
+gem 'pry'
+gem 'pry-rails'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

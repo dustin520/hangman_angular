@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+gameOne = Game.create({secret: "hangman", hintOne: "a game", hintTwo: "a word game"})
